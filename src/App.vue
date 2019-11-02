@@ -1,11 +1,10 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <HeaderNavigation />
     </div>
     <router-view />
-
+    <FooterNavigation />
     <div class="bg-red-500 text-white">
       Test Tailwind
     </div>
@@ -15,3 +14,15 @@
 <style lang="postcss">
 @import "assets/main.css";
 </style>
+
+<script>
+import FooterNavigation from "@/components/FooterNavigation.vue";
+import HeaderNavigation from "@/components/HeaderNavigation.vue";
+
+export default {
+  components: {
+    FooterNavigation,
+    HeaderNavigation
+  }
+};
+</script>
